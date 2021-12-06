@@ -1,0 +1,579 @@
+/* logo searchbar and favourites*/
+
+.header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media(max-width:700px) {
+    .header {
+        width: 70%;
+    }
+}
+
+.search {
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    border: solid springgreen;
+    background-color: rgb(107, 233, 227);
+    text-align: center;
+}
+
+
+/*total pages design*/
+
+.total1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+.total2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10%;
+}
+
+@media(max-width:700px) {
+    .playlist {
+        width: 100%;
+    }
+}
+
+
+/*carousel - artist-top_mixes-english_hindi_songs*/
+
+.deep1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    min-width: none;
+}
+
+
+/* media scrren for home page as in mobile view*/
+
+@media (max-width: 900px) {
+    .deep1 {
+        width: 70%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .deep1 {
+        width: 100%;
+    }
+}
+
+@media(max-width:700px) {
+    .deep2 {
+        display: none;
+    }
+}
+
+
+/*format page*/
+
+
+/*flex-container for carousel and mixes artists hindi and english songs*/
+
+.flex-container {
+    width: 90%;
+    display: flex;
+    vertical-align: top;
+    flex-direction: column;
+}
+
+
+/*keyframes for carousel*/
+
+@keyframes display {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+
+/*carousel design*/
+
+.pic-ctn {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    margin-top: 10px;
+    left: 10%;
+}
+
+
+/*carousel image size*/
+
+.pic-ctn>img {
+    position: absolute;
+    top: 0;
+    left: calc(10% - 100px);
+    opacity: 0;
+    animation: display 11s infinite;
+}
+
+
+/*time delay for the images of carousel*/
+
+img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+img:nth-child(3) {
+    animation-delay: 5s;
+}
+
+img:nth-child(4) {
+    animation-delay: 7s;
+}
+
+img:nth-child(5) {
+    animation-delay: 9s;
+}
+
+
+/*party trip electronics design*/
+
+.flex2 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-size: cover;
+}
+
+.flex2>div {
+    height: 100px;
+    width: 200px;
+    margin: 20px;
+    justify-content: space-between;
+    transition: 1s ease-in-out;
+}
+
+.artists {
+    border-radius: 50%;
+}
+
+
+/*artists row*/
+
+.artist_block {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    flex-direction: row;
+}
+
+.names:hover {
+    color: orange;
+}
+
+.names {
+    color: white;
+}
+
+.h2:hover {
+    color: cyan;
+}
+
+
+/*english library*/
+
+.english {
+    flex-direction: row;
+    position: relative;
+}
+
+
+/*songs*/
+
+.english_songs {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+/*hindi library*/
+
+.hindi {
+    flex-direction: row;
+    position: relative;
+}
+
+
+/*hindi songs*/
+
+.hindi_songs {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+
+/*artists information on format page*/
+
+.info {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    background-color: #1a8787;
+    background-image: linear-gradient(to bottom right, #43cea2, #185a9d);
+    top: 10%
+}
+
+.info>img {
+    background-image: linear-gradient( rgba(217, 91, 132, 0.58), rgba(145, 146, 122, 0.62));
+}
+
+.acquaint {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+@media(max-width:600px) {
+    .info {
+        max-width: 100%;
+    }
+}
+
+.nameA {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+#play_button {
+    height: 60px;
+    width: 80px;
+    background-color: darksalmon;
+    background-image: linear-gradient(to left, #ba5370, #f4e2d8);
+    border-radius: 20%;
+}
+
+
+/*playlists design starts here*/
+
+.playlist_active {
+    margin-top: 5%;
+    width: 100%;
+}
+
+
+/*heart shaped and plus icons on playlist*/
+
+.icons {
+    width: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.song_name {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/*image for the song*/
+
+.queue-cover {
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+
+/*one song design and flex
+*/
+
+.queue {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #7FCDCD;
+    margin: 4px;
+    justify-content: space-between;
+}
+
+.queue-cover {
+    display: flex;
+    flex-direction: row;
+    width: 60px;
+    height: 60px;
+    border-radius: 20%;
+    margin-right: 20px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.queue-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.queue-cover i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.queue>i {
+    display: block;
+}
+
+
+/*deep2*/
+
+
+/*scroller for the homepage playlist*/
+
+.deep2 {
+    overflow-y: scroll;
+}
+
+.deep2 {
+    width: 40%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    float: right;
+    justify-content: space-between;
+}
+
+.deep2::-webkit-scrollbar {
+    display: none;
+}
+
+
+/*playlist on format page*/
+
+.deep3 {
+    overflow-y: scroll;
+}
+
+.deep3 {
+    width: 30%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    float: right;
+}
+
+.deep3::-webkit-scrollbar {
+    display: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 100%;
+    margin: 5px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 3%;
+}
+
+#q {
+    margin-right: 40%;
+}
+
+.song_icon img {
+    width: 60px;
+    height: 100%;
+}
+
+.playlist {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.playlist1 {
+    width: 800px;
+}
+
+@media(max-width:600px) {
+    .playlist1 {
+        width: 90%;
+    }
+}
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    font-size: 10px;
+    border: none;
+    margin-right: 15%;
+    right: 10%;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 45%;
+    margin-top: 5%;
+}
+
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+.audio {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    top: 90%;
+    background-color: #357e7e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.audio img {
+    height: 60px;
+    width: 60px;
+}
+
+@media(max-width:500px) {
+    .audio {
+        width: 100%;
+    }
+}
+
+.audio1 {
+    height: 60px;
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.audio2 {
+    margin-top: 1%;
+    width: 500px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.audio3 {
+    margin-top: 1%;
+    display: flex;
+    width: 220px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.audio4 {
+    margin-right: 15%;
+    margin-top: 1%;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#audio_timer {
+    width: 500px;
+    border-radius: 30%;
+}
